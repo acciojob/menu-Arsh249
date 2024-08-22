@@ -86,7 +86,7 @@ const App = () => {
     <div id='main'>
       <nav>
         {allCategories.map((cat, index) => (
-          <button key={index} id={`filter-btn-${index + 1}`} onClick={() => setCategory(cat)}>
+          <button key={index} id={`filter-btn-${index + 1}`} data-test-id={`menu-item-${cat}`} onClick={() => setCategory(cat)}>
             {cat}
           </button>
         ))}
