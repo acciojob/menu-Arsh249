@@ -83,10 +83,10 @@ const App = () => {
   const filteredDishes = category === 'all' ? dishes : dishes.filter(dish => dish.category === category);
 
   return (
-    <div>
+    <div id='main'>
       <nav>
         {allCategories.map((cat, index) => (
-          <button key={index} onClick={() => setCategory(cat)}>
+          <button key={index} id='filter-btn-{index+1}' onClick={() => setCategory(cat)}>
             {cat}
           </button>
         ))}
