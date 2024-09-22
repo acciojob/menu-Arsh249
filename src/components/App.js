@@ -98,18 +98,20 @@ const App = () => {
       </button>
 
       {/* Filter Buttons for Specific Categories */}
-      <nav>
-        {categories.map((cat, index) => (
-          <button
-            key={index}
-            id={`filter-btn-${index + 1}`}
-            data-test-id={`menu-item-${cat}`}
-            onClick={() => setCategory(cat)}
-          >
-            {cat}
-          </button>
-        ))}
-      </nav>
+      {category !== "all" && (
+  <nav>
+    {categories.map((cat, index) => (
+      <button
+        key={index}
+        id={`filter-btn-${index + 1}`}
+        data-test-id={`menu-item-${cat}`}
+        onClick={() => setCategory(cat)}
+      >
+        {cat}
+      </button>
+    ))}
+  </nav>
+)}
 
       <section>
         {filteredDishes.map((dish) => (
