@@ -89,13 +89,13 @@ const App = () => {
   return (
     <div id="main">
       {/* All Items Button */}
-      <button
+      <div
         id="filter-btn-all"
         data-test-id="menu-item-all"
         onClick={() => setCategory("all")}
       >
         All Items
-      </button>
+      </div>
 
       {/* Filter Buttons for Specific Categories */}
       {category !== "all" && (
