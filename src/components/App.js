@@ -101,14 +101,14 @@ const App = () => {
       {category !== "all" && (
   <nav>
     {categories.map((cat, index) => (
-      <button
+      <div
         key={index}
         id={`filter-btn-${index + 1}`}
         data-test-id={`menu-item-${cat}`}
         onClick={() => setCategory(cat)}
       >
         {cat}
-      </button>
+      </div>
     ))}
   </nav>
 )}
