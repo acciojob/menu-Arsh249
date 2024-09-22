@@ -76,7 +76,7 @@ const App = () => {
     },
   ];
 
-  const [category, setCategory] = useState("all");
+  const [category, setCategory] = useState();
 
   // Create unique categories except 'all'
   const categories = [...new Set(dishes.map((dish) => dish.category))];
